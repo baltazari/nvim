@@ -79,13 +79,13 @@ local function ensure_window()
 
   -- ✅ set winhighlight *after* opening the window
 
-  pcall(
-    vim.api.nvim_set_option_value,
-    "winhighlight",
-    "NormalFloat:NormalFloat,FloatBorder:FloatBorder",
-    "FloatTitle:FloatTitle",
-    { win = state.win }
-  )
+  pcall(function()
+    vim.api.nvim_set_option_value(
+      "winhighlight",
+      "NormalFloat:NormalFloat,FloatBorder:FloatBorder,FloatTitle:FloatTitle",
+      { win = state.win }
+    )
+  end)
 
   -- 'q' closes the float in normal mode
   vim.keymap.set("n", "q", function()
