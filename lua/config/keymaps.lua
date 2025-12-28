@@ -46,7 +46,7 @@ end, { desc = "Switch to terminal tab 3" })
 
 vim.keymap.set({ "n", "t", "i" }, "<A-4>", function()
   require("float_term_tabs").switch(4)
-end, { desc = "Switch to terminal tab 6" })
+end, { desc = "Switch to terminal tab 4" })
 
 vim.keymap.set({ "n", "t", "i" }, "<A-5>", function()
   require("float_term_tabs").switch(5)
