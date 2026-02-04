@@ -56,3 +56,9 @@ end, { desc = "Switch to terminal tab 5" })
 vim.keymap.set({ "n", "t", "i" }, "<A-tab>", function()
   require("float_term_tabs").next()
 end, { desc = "Next terminal tab" })
+-- in lua/config/keymaps.lua (create the file if it doesn't exist)
+
+local map = vim.keymap.set
+
+map("n", "<Tab>", "<cmd>bnext<CR>", { desc = "Next Buffer" })
+map("n", "<S-Tab>", "<cmd>bprevious<CR>", { desc = "Prev Buffer" })
